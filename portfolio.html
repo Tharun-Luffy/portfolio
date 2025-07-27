@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tharun TV - Portfolio</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+
+        .project,
+        .edu,
+        .skill,
+        .achievements {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+        }
+
+        .dark-mode {
+            background: #121212;
+            color: #eee;
+        }
+
+        .dark-mode header {
+            background: #222;
+        }
+
+        .dark-mode nav a {
+            color: #eee;
+        }
+
+        .dark-mode .project,
+        .dark-mode .edu,
+        .dark-mode .skill,
+        .dark-mode .achievements {
+            background: #1e1e1e;
+        }
+
+        .toggle-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #fff;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tharun TV</h1>
+        <p>Fullstack Developer | Chennai, India</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Tharun TV, a passionate fullstack developer specializing in web development, Data structures,
+                IoT systems, and
+                modern software engineering.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu">
+                <h3>Shiv Nadar University</h3>
+                <p>B.Tech in Computer Science Engineering (IoT)<br>Aug 2023 – May 2027<br>Current GPA: 8.12</p>
+                <p>Core Modules: Data Structures, OS, DBMS, Networks, AI, IoT Systems</p>
+            </div>
+            <div class="edu">
+                <h3>Class 12 - Holy Family Convent</h3>
+                <p>Percentage: 96%</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Full Stack AI Career Coach</h3>
+                <p>Built an AI career coaching web app with Next.js, Tailwind CSS, Neon DB, Prisma, Inngest, and Shadcn
+                    UI. Provided personalized career guidance and recommendations through an AI-powered chat interface.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Wearable Sensor with AI for Fall Prevention</h3>
+                <p>Developed an IoT-based wearable using NodeMCU ESP8266 and MPU6050. Built a machine learning model to
+                    detect fall risks in real time using Python, Flask, OpenPose, YOLOv7.</p>
+            </div>
+            <div class="project">
+                <h3>RoverX – Autonomous Rescue Rover</h3>
+                <p>Designed an autonomous rover for disaster response with obstacle avoidance, dynamic path planning,
+                    multi-sensor fusion, and real-time simulation using Flask and Webots.</p>
+            </div>
+            <div class="project">
+                <h3>Event Management System</h3>
+                <p>Built a web-based system for booking halls and venues. Used React, MySQL, and Razorpay for managing
+                    reservations, users, and payments.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skill">
+                <p><strong>Languages:</strong> C/C++, Python, JavaScript, TypeScript, SQL, HTML5, CSS3</p>
+                <p><strong>Paradigms:</strong> OOP, Functional, Concurrent, Microservices, REST, Async IO</p>
+                <p><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, Neon DB</p>
+                <p><strong>Frameworks:</strong> React.js, Next.js, React Native, Node.js, Express, Angular</p>
+                <p><strong>Tools:</strong> Linux, Git, GitHub, VS Code, Neovim, Docker, Kubernetes, Prisma, Postman,
+                    Inngest, Shadcn UI, CI/CD, Shell</p>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <ul>
+                    <li>Solved 100+ problems on LeetCode, GeeksforGeeks, Coding Ninjas.</li>
+                    <li>Qualified Internal Hackathon to represent SNU in SIH-2024.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:tvtharun4106@gmail.com">tvtharun4106@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/tharun-tv-6763362b3"
+                    target="_blank">linkedin.com/in/tharun-tv</a></p>
+            <p>GitHub: <a href="https://github.com/Tharun-Luffy" target="_blank">github.com/Tharun-Luffy</a></p>
+            <p>LeetCode: <a href="https://leetcode.com/u/Tharun4106/" target="_blank">leetcode.com/u/Tharun4106</a></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> Tharun TV
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+
+</html>
